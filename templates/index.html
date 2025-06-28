@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iris Flower Classifier </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman','Times Roman';
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #a45eff;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #a45eff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color:#a45eff;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Iris Flower Predictor</h2>
+    <form action="/predict" method="POST">
+      <label for="sepal_length">Sepal Length (cm)</label>
+      <input type="number" step="any" id="sepal_length" name="sepal_length" required>
+
+      <label for="sepal_width">Sepal Width (cm)</label>
+      <input type="number" step="any" id="sepal_width" name="sepal_width" required>
+
+      <label for="petal_length">Petal Length (cm)</label>
+      <input type="number" step="any" id="petal_length" name="petal_length" required>
+
+      <label for="petal_width">Petal Width (cm)</label>
+      <input type="number" step="any" id="petal_width" name="petal_width" required>
+
+      <button type="submit">Predict Species </button>
+    </form>
+  </div>
+</body>
+</html>
